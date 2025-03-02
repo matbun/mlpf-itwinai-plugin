@@ -15,8 +15,8 @@ COPY src src
 # Install dependencies
 RUN pip install --no-cache-dir .
 
-# Copy your scripts
-COPY main.py main.py
+# # Copy your scripts
+# COPY main.py main.py
 
 # Set entrypoint
 CMD ["python", "main.py"]

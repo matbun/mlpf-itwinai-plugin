@@ -3,9 +3,9 @@ name: Unit and integration tests
 
 on:
   pull_request:
-    branches: [main]
+    branches: [noname]
   push:
-    branches: [main]
+    branches: [noname]
 
 jobs:
   test-itwinai:
