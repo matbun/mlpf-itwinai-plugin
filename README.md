@@ -1,4 +1,4 @@
-# Writing plugins for itwinai
+# MLPF plugin for itwinai
 
 [![GitHub Super-Linter](https://github.com/matbun/mlpf-itwinai-plugin/actions/workflows/lint.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![GitHub Super-Linter](https://github.com/matbun/mlpf-itwinai-plugin/actions/workflows/check-links.yml/badge.svg)](https://github.com/marketplace/actions/markdown-link-check)
