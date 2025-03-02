@@ -10,10 +10,44 @@ description = "Machine-learned Particle Flow plugin for itwinai"
 requires-python = ">=3.10"
 readme = "README.md"
 license = { file = "LICENSE" }
+# Full list of MLPF authors under AUTHORS.md
 authors = [{ name = "Matteo Bunino", email = "matteo.bunino@cern.ch" }]
 dependencies = [
-    "itwinai[torch]@git+https://github.com/interTwin-eu/itwinai@unified-trainers",
+    "apache-beam>=2.63.0",
+    "array-record>=0.6.0",
+    "autopep8>=2.3.2",
+    "awkward>=2.7.4",
+    "boost-histogram>=1.5.1",
+    "click>=8.1.8",
+    "comet-ml>=3.49.3",
+    "fastjet>=3.4.2.1",
+    "fsspec>=2025.2.0",
+    "itwinai[torch]",
+    "matplotlib>=3.10.0",
+    "mplhep>=0.3.57",
+    "networkx>=3.4.2",
+    "nevergrad>=1.0.8",
+    "notebook>=7.3.2",
+    "numba>=0.61.0",
+    "numpy>=1.26.4",
+    "pandas>=2.2.3",
+    "papermill>=2.6.0",
+    "protobuf>=5.29.3",
+    "pyarrow>=16.1.0",
     "pytest>=8.3.4",
+    "ray[train,tune]>=2.42.1",
+    "scikit-learn>=1.6.1",
+    "scikit-optimize>=0.10.2",
+    "scipy>=1.15.2",
+    "seaborn>=0.13.2",
+    "setgpu>=0.0.7",
+    "tensorboard>=2.19.0",
+    "tensorflow-datasets>=4.9.7",
+    "torch>=2.4.1",
+    "torch-runstats>=0.2.0",
+    "tqdm>=4.67.1",
+    "uproot>=5.5.2",
+    "vector>=1.6.1",
 ]
 
 [tool.setuptools.packages.find]
@@ -39,3 +73,6 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
+
+[tool.uv.sources]
+itwinai = { git = "https://github.com/interTwin-eu/itwinai", rev = "unified-trainers" }
