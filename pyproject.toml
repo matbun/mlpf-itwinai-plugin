@@ -57,7 +57,7 @@ where = ["src"]
 
 # Make sure to list all the plugin subfolders here,
 # otherwise the plugin may not be installed correctly!
-include = ["itwinai.plugins.mlpf"]
+include = ["itwinai.plugins.mlpf", "itwinai.plugins.mlpf.model"]
 
 # Ruff configuration: https://docs.astral.sh/ruff/configuration/
 [tool.ruff]
