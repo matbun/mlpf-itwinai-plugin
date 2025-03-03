@@ -75,9 +75,6 @@ run(){
         --num-gpus=$RAY_GPUS 
         # --block &
     echo "RAY STARTED"
-
-    # Make mlpf visible
-    export PYTHONPATH="$PWD:$PYTHONPATH"
     
     uv run python -u pipeline.py \
         --train \
@@ -104,10 +101,6 @@ run_itwinai(){
     RAY_GPUS=0
 
     uv run ray stop
-
-    # Make mlpf visible
-    export PYTHONPATH="$PWD:$PYTHONPATH"
-
     uv run python -u \
         pipeline_itwinai.py \
         --train \
@@ -141,9 +134,6 @@ run_itwinai_ray(){
         --num-gpus=$RAY_GPUS 
         # --block &
     echo "RAY STARTED"
-
-    # Make mlpf visible
-    export PYTHONPATH="$PWD:$PYTHONPATH"
 
     # uv run python -Xfrozen_modules=off -m debugpy --listen 5678 --wait-for-client  \
     uv run python -u \

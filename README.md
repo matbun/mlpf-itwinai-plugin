@@ -36,13 +36,25 @@ my_trainer = MLPFTrainer(...)
 Alternatively, you can launch training using the configuration file in this repository:
 
 ```bash
-itwinai exec-pipeline --config-name config.yaml
-
-# If you want to dynamically override some fields in the config file
-itwinai exec-pipeline --config-name config.yaml \
-    epochs=2 \
-    training_pipeline.steps.0.config.path_models my_models 
+python -u pipeline.py \
+    --train \
+    --ray-train \
+    --config parameters/pyg-clic-itwinai.yaml \
+    --data-dir /ceph/hpc/data/d2024d11-083-users/data/tensorflow_datasets/clic \
+    --ntrain 50 \
+    --nvalid 50 \
+    --prefix foo_prefix \
+    --ray-cpus 8 \
+    --gpus 1 \
+    --gpu-batch-multiplier 8 \
+    --num-workers 8 \
+    --prefetch-factor 8 \
+    --experiments-dir $PWD/experiments \
+    --slurm-nnodes 1 \
+    --num-epochs 2
 ```
+
+You will find more examples under `scripts/jsc/interactive.sh` and `scripts/vega/interactive.sh`
 
 <!-- > [!NOTE]
 > Consider that this model needs to be distributed on 4 GPUs, as it implements

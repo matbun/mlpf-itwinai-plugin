@@ -3,6 +3,9 @@ logs_*
 *.out
 *.err
 tmp*
+experiments*
+scalability-metrics
+plots
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

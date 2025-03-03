@@ -98,6 +98,7 @@ run(){
         --num-workers 8 \
         --prefetch-factor 8 \
         --experiments-dir $PWD/experiments \
+        --slurm-nnodes 1 \
         --num-epochs 2
 }
 
@@ -129,6 +130,7 @@ run_itwinai(){
         --prefetch-factor 8 \
         --experiments-dir $PWD/experiments \
         --num-epochs 2 \
+        --slurm-nnodes 1 \
         --itwinai-trainerv 4
 }
 
@@ -167,5 +169,6 @@ run_itwinai_ray(){
         --prefetch-factor 8 \
         --experiments-dir $PWD/experiments \
         --num-epochs 2 \
+        --slurm-nnodes 1 \
         --itwinai-trainerv 4
 }
