@@ -58,8 +58,8 @@ from itwinai.torch.monitoring.monitoring import measure_gpu_utilization
 from itwinai.torch.profiling.profiler import profile_torch_trainer
 from itwinai.torch.trainer import TorchTrainer as ItwinaiTorchTrainer
 from itwinai.torch.type import Batch, Metric
-from mlpf.model.logger import _logger
 
+from .logger import _logger
 from .losses import mlpf_loss
 from .mlpf import MLPF, set_save_attention
 from .PFDataset import (
