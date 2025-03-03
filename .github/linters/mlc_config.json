@@ -1,7 +1,9 @@
 {
   "httpHeaders": [
     {
-      "urls": ["https://docs.github.com/"],
+      "urls": [
+        "https://docs.github.com/"
+      ],
       "headers": {
         "Accept-Encoding": "zstd, br, gzip, deflate"
       }
@@ -15,10 +17,10 @@
       "pattern": "^https://example.com"
     },
     {
-      "pattern": "https://github.com/interTwin-eu/REPOSITORY/issues/new"
+      "pattern": "https://github.com/matbun/mlpf-itwiai-plugin/issues/new"
     },
     {
-      "pattern": "https://github.com/interTwin-eu/REPOSITORY/graphs/contributors"
+      "pattern": "https://github.com/matbun/mlpf-itwiai-plugin/graphs/contributors"
     }
   ]
 }

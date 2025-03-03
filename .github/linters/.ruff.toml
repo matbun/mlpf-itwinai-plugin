@@ -1,7 +1,7 @@
 line-length = 95
 
 [lint]
-select = ["E", "F", "I"]
+select = ["E", "F"]
 ignore = ["E203"]
 
 [format]

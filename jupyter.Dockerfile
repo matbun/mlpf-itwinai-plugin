@@ -17,8 +17,8 @@ COPY  --chown=${NB_UID} src src
 # Install dependencies
 RUN pip install --no-cache-dir .
 
-# Copy your scripts
-COPY  --chown=${NB_UID} main.py main.py
+# # Copy your scripts
+# COPY  --chown=${NB_UID} main.py main.py
 
 # DO NOT SET AN ENTRYPOINT OR A CMD, unless you know what you are doing
 # Otherwise you risk of breaking the spawn in JupyterHub

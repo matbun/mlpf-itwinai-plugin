@@ -6,7 +6,53 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+The version number mirrors the upstream MLPF model in the [particleflow](https://github.com/jpata/particleflow)
+repository.
 
-## [X.X.XX]
-- Change description (#PR_NUMBER) (AUTHOR)
+## 2.2.0
+
+This first plugin version is based on [https://github.com/jpata/particleflow/tree/v2.2.0](https://github.com/jpata/particleflow/tree/v2.2.0)
+and uses dataset version `2.5.0`.
+
+```text
+@software{joosep_pata_2025_14650991,
+author       = {Joosep Pata and
+                Eric Wulff and
+                Farouk Mokhtar and
+                Javier Duarte and
+                Aadi Tepper and
+                Ka Wa Ho and
+                Lars Sørlie},
+title        = {jpata/particleflow: v2.2.0},
+month        = jan,
+year         = 2025,
+publisher    = {Zenodo},
+version      = {v2.2.0},
+doi          = {10.5281/zenodo.14650991},
+url          = {https://doi.org/10.5281/zenodo.14650991},
+swhid        = {swh:1:dir:56700b267936780cdac996a9081629a4b021aa57
+                ;origin=https://doi.org/10.5281/zenodo.4452541;vis
+                it=swh:1:snp:2d60c9786014e36f924964606de870671f8df
+                dd4;anchor=swh:1:rel:1b7d725ec15bedd24a0a8c530638b
+                78400c9bf59;path=jpata-particleflow-6e852b0
+                },
+}
+```
+
+### Relationship to particleflow
+
+This version adapts the following components from [particleflow](https://github.com/jpata/particleflow/tree/v2.2.0):
+
+- Network architecture, dataset management, training logic, and some utility functions from `mlpf/` directory
+- Training configuration from  `parameters/` directory
+- Dependencies from `requirements.txt`
+
+Changes made include:
+
+- Modified training functions to support itwinai's TorchTrainer format
+- Modified ML logging logic to support itwinai's Logger abstraction
+- Added support for MLFLow, Weights&Biases, and yProvML loggers
+- Added Horovod and DeepSpeed strategies for distributed ML on multiple nodes
+- Introduced the possibility to run distributed ML under hyper-parameter optimization with the itwinai TorchTrainer
+- Simplified configuration management through itwinai and Hydra
+- Refactoring of the dependencies management via a `pyproject.toml` file
