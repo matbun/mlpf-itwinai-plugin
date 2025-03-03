@@ -55,7 +55,6 @@ from tqdm import tqdm
 from itwinai.loggers import EpochTimeTracker, Logger
 from itwinai.torch.config import TrainingConfiguration
 from itwinai.torch.monitoring.monitoring import measure_gpu_utilization
-from itwinai.torch.profiling.profiler import profile_torch_trainer
 from itwinai.torch.trainer import TorchTrainer as ItwinaiTorchTrainer
 from itwinai.torch.type import Batch, Metric
 
@@ -556,7 +555,8 @@ class MLPFTrainer(ItwinaiTorchTrainer):
 
         self._set_epoch_dataloaders(self.epoch - 1)
 
-    @profile_torch_trainer
+    # You can comment/uncomment these decorators to enable/disable monitoring
+    # @profile_torch_trainer
     @measure_gpu_utilization
     def train(self) -> None:
         # TODO: define dynamically
